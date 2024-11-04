@@ -1,56 +1,117 @@
-/* Basic CSS styles */
+/* Reset and basic styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    color: #333;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f4;
+}
+.profile-photo {
+    width: 150px;            /* Set width and height to control size */
+    height: 150px;
+    border-radius: 50%;      /* Makes the image circular */
+    border: 3px solid #333;  /* Optional: Add a border */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow */
+    object-fit: cover;       /* Ensures the image covers the container */
 }
 
+/* Navbar */
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 1rem 0;
-    text-align: center;
+  background: #333;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
 }
 
-header ul {
-    list-style: none;
-    padding: 0;
+nav ul {
+  list-style: none;
 }
 
-header li {
-    display: inline;
-    margin: 0 1rem;
+nav ul li {
+  display: inline;
+  margin: 0 10px;
 }
 
-header a {
-    color: #fff;
-    text-decoration: none;
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
 }
 
-section {
-    padding: 2rem;
-    margin: 0 auto;
-    max-width: 800px;
+nav ul li a:hover {
+  text-decoration: underline;
 }
 
+/* Hero Section */
 #hero {
-    background-color: #f4f4f4;
-    padding: 4rem;
-    text-align: center;
+  background: #555;
+  color: #fff;
+  padding: 2rem;
+  text-align: center;
+}
+
+#hero h1 {
+  font-size: 2.5rem;
+}
+
+/* Sections */
+section {
+  padding: 2rem;
+}
+
+h2 {
+  margin-bottom: 1rem;
+  color: #333;
+  text-align: center;
+}
+
+.project-grid {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .project {
-    border: 1px solid #ddd;
-    padding: 1rem;
-    margin: 1rem 0;
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  width: 100%;
+  max-width: 300px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+.project h3 {
+  color: #333;
+}
+
+/* Contact Section */
+#contact p {
+  text-align: center;
+}
+
+/* Footer */
 footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1rem 0;
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav ul li {
+    display: block;
+    margin: 0.5rem 0;
+  }
+
+  .project-grid {
+    flex-direction: column;
+  }
 }
